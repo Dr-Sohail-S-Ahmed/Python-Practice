@@ -1,4 +1,4 @@
-# Numpy main objective is 'n' dimensional array (ndarray)
+# NumPy main objective is 'n' dimensional array (ndarray)
 
 # DISPLAY LIST OF FUNCTIONS
 import numpy as np
@@ -15,12 +15,17 @@ import sys
 
 # MEMORY USAGE
 print("MEMORY USAGE")
+
     # Python range
 l = range(1000)     # range of 1000 elements
-print(sys.getsizeof(1) * len(l))        # find size of an integer multiplied by the total length of the range
+print(f"Python list size using 'sys.getsize' is {sys.getsizeof(1) * len(l)}")        # find size of an integer multiplied by the total length of the range
+
     # Numpy array
 array = np.arange(1000)
-print(array.itemsize * array.size)      # find size of single item multiplied by the total length of the array
+# (Method 1)
+print(f"Numpy array size using 'itemsize' is {array.itemsize * array.size}")      # find size of single item multiplied by the total length of the array
+# (Method 2)
+print(f"Numpy array size using 'nbytes' is {array.nbytes}")
 
 
 # TIME TAKEN
@@ -33,7 +38,7 @@ L2 = range(size)
 
 start = time.time()
 result = [x+y for x,y in zip(L1,L2)]        # 1st elements of each list are added and added to the list then same for 2nd and so on
-    # ↑ this is list comprehesion
+    # ↑ this is list comprehesion & Python must do this to add up each corresponding element from both lists
 print("Python list took: ", (time.time()-start) * 1000, "ms")
 
     # Numpy array

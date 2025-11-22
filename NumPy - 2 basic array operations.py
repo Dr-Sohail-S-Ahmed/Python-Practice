@@ -1,3 +1,5 @@
+# (see also EDA (tab) in Programming.xlsx)
+
 import numpy as np
 
 # ELEMENT LOCATION
@@ -8,16 +10,16 @@ print(a[0])     # location of element
 # ARRAY DIMENSION
 print("ARRAY DIMENSION")
 a = np.array([[1,2],[3,4],[5,6]])
-print(a.ndim)   # shows dimension of arrays but if any individual element's dimension is changed, error occurs
+print(f"a has {a.ndim}")   # shows dimension of arrays but if any individual element's dimension is changed, error occurs
                 # like 'a = np.array([[1,2],[3,4],[5,6,7]])'
 b = np.array([[1,2,3],[4,5,6],[7,8,9]])
-print(b.ndim)   # dimension are represented by '[]'
+print(f"b has {b.ndim}")   # dimension are represented by '[]'
 
 c = np.array([[[1,2],[3,4]]])
-print(c.ndim)
+print(f"c has {c.ndim}")
 
 d = np.array([[[[1,2]]]])
-print(d.ndim)
+print(f"d has {d.ndim}")
 
 # DATA TYPE
 print("DATA TYPE")
@@ -36,9 +38,11 @@ print(d.itemsize)
 # CHANGING DATA TYPE
 print("CHANGING DATA TYPE")
 e = np.array([[1,2,3],[4,5,6]], dtype=np.float32)   # data type changed from integer to float and from 64-bit to 32-bit
-print(e.itemsize)
+print(f"each element item size is {e.itemsize}")
+print("array in float32 form is")
 print(e)
 e = np.array([[1,2,3],[4,5,6]], dtype=complex)      # data type changed to complex nos.
+print("array in complex is")
 print(e)
             # IMPORTANT NOTE: '...dtype=np.float32' doesn't give error bcz 'float32' is a valid NumPy data type while '...dtype=np.complex' does
             # bcz 'complex' is no longer a valid data type in NumPy + however, this 'complex' (as in '...dtype=np.complex' is built-in
@@ -46,22 +50,23 @@ print(e)
 
 # ARRAY SIZE
 print("ARRAY SIZE")
-print(e.size)       # thru Python
-print(np.size(e))   # thru NumPy
+print(f"array 'e' size in Python is {e.size}")       # thru Python
+print(f"array 'e' size in NumPy is {np.size(e)}")   # thru NumPy
 
 # ARRAY SHAPE (AS IN TABLE FORM)
 print("ARRAY SHAPE (AS IN TABLE FORM)")
 print(e)
-print(e.shape)      # thru Python; specifies array height (rows) and width (column)
-print(np.shape(e))  # thru NumPy; specifies array height (rows) and width (column)
+print(f"array shape (row,col) in Python is {e.shape}")      # thru Python; specifies array height (rows) and width (column)
+print(f"array shape (row,col) in NumPy is {np.shape(e)}")  # thru NumPy; specifies array height (rows) and width (column)
 
 # RESHAPING ARRAY
 print("RESHAPING ARRAY")
+print("reshaped array is")
 print(e.reshape(6,1))   # non-symmetrical shape will give error like changing '(2,3)' to '(4,2)' i.e. all entries should fit the shape
 
 # 1-DIMENSIONAL ARRAY
 print("1-DIMENSIONAL ARRAY")
-print(e.ravel())    # flatten the array to a single dimension
+print(f"flattened 1D array is {e.ravel()}")    # flatten the array to a single dimension
 print(e)            # this show that 'ravel()' doesn't change the original array but rather gives a new one
 
 # CREATING ARRAY FROM SHAPE
