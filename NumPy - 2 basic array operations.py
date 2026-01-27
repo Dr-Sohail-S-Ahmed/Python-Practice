@@ -28,12 +28,26 @@ print(b.dtype)
 print(c.dtype)
 print(d.dtype)
 
-# BYTE SIZE
+# BYTE SIZE (i.e. bytes taken by every single element)
 print("BYTE SIZE")
 print(a.itemsize)
 print(b.itemsize)
 print(c.itemsize)
 print(d.itemsize)
+
+# LIST SIZE (i.e. the total number of elements in the list)
+print("LIST SIZE")
+print(a.size)
+print(b.size)
+print(c.size)
+print(d.size)
+
+# SORTING ELEMENTS
+print("SORTING ELEMENTS")
+print(np.sort(a))
+print(np.sort(b))
+print(np.sort(c))
+print(np.sort(d))
 
 # CHANGING DATA TYPE
 print("CHANGING DATA TYPE")
@@ -75,6 +89,7 @@ print(np.zeros((3,4)))
 print(np.ones((3,4)))                    # '0s' and '1s' as in binary + 'ones' and 'zeros' are part of NumPy only
 print(2 * np.ones((3,4)))                # '2*', '3*' and their like for numbers beyond '1'
 print(np.full((3,4),99))   # '(3,4)' defines the shape of the array while ',99' defines number to be filled in
+    # '.zeros', '.ones' have use in neural networks to create matrices & assigning weights
 
 # RANGE (PYTHON) vs ARANGE (NUMPY)
 print("RANGE (PYTHON) vs ARANGE (NUMPY)")
@@ -84,9 +99,10 @@ print(f)
 print(np.arange(10))    # in NumPy + similar to 'np.arange(0,10)
 print(np.arange(0,10,2))    # 3rd no. indicates the steps
 
-# LINEARLY SPACED NUMBERS
-print("LINEARLY SPACED NUMBERS")
-print(np.linspace(1,5,10))  # equally spaced nos. btw given starting and ending nos.
+# LINEARLY SPACED ELEMENTS
+print("LINEARLY SPACED ELEMENTS")
+print(np.linspace(1,20,30))  # equally spaced nos. btw given starting and ending nos.
+    # useful in data analysis & ML
 
 # MATHEMATICAL FUNCTIONS
 print("MATHEMATICAL FUNCTIONS")
@@ -108,8 +124,8 @@ print(np.sum(b,axis=1))
 print(b.sum(axis=1))    # both give same result
 # 'axis=0' refers to summing in y-axis while 'axis=1' refers to summing in x-axis
 
+print(np.square(b))       # give square of all nos. in array
 print(np.sqrt(b))       # give square root of all nos. in array
-
 print(np.std(b))        # standard deviation of all nos. in array
 
 print("     For 1-D Array")
@@ -126,3 +142,27 @@ j = np.array([[5,6],
 result = np.dot(i,j)    # performs matrix multiplication + 'np.matmul(i,j)' gives the same result
 print(result)           # |1 2| |5 6|  =  |(1*5) + (2*7) (1*6) + (2*8)|  =  |19 22|
                         # |3 4| |7 8|     |(3*5) + (4*7) (3*6) + (4*8)|     |43 50|
+
+# CONVERTING ARRAY INTO A SINGLE DIMENSION (1D)
+print("CONVERTING ARRAY INTO 1-D")
+k = np.array([[3,2,1],
+              [6,4,5],
+              [8,9,7]])
+print(k.ravel())
+    # inner most [] is used to write the array while outside it "," would result in Python asking for dtype e.g.
+    # k = np.array(object:[[1,2,3],
+    #               [4,5,6],
+    #               [7,8,9]],dtype:[])
+print(k.flatten())
+
+# SUM ELEMENTS IN ARRAY
+print("SUM ELEMENTS IN ARRAY")
+l = np.array([[100,200,300],
+              [600,500,400],
+              [800,900,700],
+              [900,300,600]])
+print(l.sum())          # for summing all elements
+print(l.sum(axis=0))    # for vertical summing
+print(l.sum(axis=1))    # for horizontal summing
+    # the arrays should contain same no. of elements otherwise ERROR
+
