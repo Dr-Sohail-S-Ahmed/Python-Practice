@@ -1,0 +1,38 @@
+movie_id,title,language_id,budget,revenue,currency
+101,K.G.F: Chapter 2,3,1.0,12.5,INR
+102,Doctor Strange in the Multiverse of Madness,5,200.0,954.8,USD
+103,Thor: The Dark World ,5,165.0,644.8,USD
+104,Thor: Ragnarok ,5,180.0,854.0,USD
+105,Thor: Love and Thunder ,5,250.0,670.0,USD
+107,Dilwale Dulhania Le Jayenge,1,400.0,2000.0,INR
+108,3 Idiots,1,550.0,4000.0,INR
+109,Kabhi Khushi Kabhie Gham,1,390.0,1360.0,INR
+110,Bajirao Mastani ,1,1.4,3.5,INR
+111,The Shawshank Redemption,5,25.0,73.3,USD
+113,Interstellar,5,165.0,701.8,USD
+115,The Pursuit of Happyness,5,55.0,307.1,USD
+116,Gladiator,5,103.0,460.5,USD
+117,Titanic,5,200.0,2202.0,USD
+118,It's a Wonderful Life,5,3.18,3.3,USD
+119,Avatar,5,237.0,2847.0,USD
+120,The Godfather,5,7.2,291.0,USD
+121,The Dark Knight,5,185.0,1006.0,USD
+122,Schindler's List,5,22.0,322.2,USD
+123,Jurassic Park,5,63.0,1046.0,USD
+124,Parasite,5,15.5,263.1,USD
+125,Avengers: Endgame,5,400.0,2798.0,USD
+126,Avengers: Infinity War,5,400.0,2048.0,USD
+127,Pather Panchali,7,70000.0,100000.0,INR
+128,Taare Zameen Par,1,120.0,1350.0,INR
+129,Munna Bhai M.B.B.S.,1,100.0,410.0,INR
+130,PK,1,850.0,8540.0,INR
+131,Sanju,1,1.0,5.9,INR
+132,Pushpa: The Rise - Part 1,2,2.0,3.6,INR
+133,RRR,2,5.5,12.0,INR
+134,Baahubali: The Beginning,2,1.8,6.5,INR
+135,The Kashmir Files,1,250.0,3409.0,INR
+136,Bajrangi Bhaijaan,1,900.0,11690.0,INR
+137,Captain America: The First Avenger,5,216.7,370.6,USD
+138,Captain America: The Winter Soldier,5,177.0,714.4,USD
+139,Race 3,1,1.8,3.1,INR
+140,Shershaah,1,500.0,950.0,INR
