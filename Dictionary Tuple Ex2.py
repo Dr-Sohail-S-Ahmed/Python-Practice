@@ -12,6 +12,7 @@ def print_all():
 # print_all()       # This is disabled bcz of the main menu created below as the runs this before the 'main_menu'
 
 # ADDING/APPENDING DATA
+# Append is a list method therefore can't be used with a dictionary
 def add_stock():
     stk = input("Name of stock: ")
     vlu = float(input("Value of stock: "))

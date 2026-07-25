@@ -1,3 +1,5 @@
+# List denoted by '[]', stores values accessed by integer position
+
 # 3 types of data: integer/float, boolean & string
 names = ["Sohail", "Ali", "Imran", "Sadiq", "Umair"]    # square brackets '[]' can be used to write lists
 print(names)

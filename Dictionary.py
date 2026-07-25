@@ -1,6 +1,6 @@
 # Dictionary (aka Maps, Hashtables, Associate Arrays) enable to store the key value pairs.
 # It's like a telephone directory & doesn't store in any specific order.
-# Dictionary is added using '{}'.
+# Dictionary denoted by '{}', stores values accessed by any key including strings
 # Dictionary isn't iterable like list or tuple bcz it's a mapping of keys & values unlike lists or tuples which are ordered sequences
   # therefore Python requires
 
